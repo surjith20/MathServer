@@ -33,6 +33,7 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 html.html
+```
 <html>
 <head>
 <meta charset='utf-8'>
@@ -91,8 +92,10 @@ h1 {
 </div>
 </body>
 </html>
+```
 
 urls.py
+```
 from django.shortcuts import render
 
 def surfacearea(request):
@@ -118,11 +121,10 @@ def surfacearea(request):
         print('Area =', area)
     
     return render(request, 'mathapp/math.html', context)
-
-
-
-    view.py
-    from django.contrib import admin
+```
+view.py
+```
+from django.contrib import admin
 from django.urls import path
 from mathapp import views
 urlpatterns = [
@@ -130,7 +132,7 @@ urlpatterns = [
     path('areaofsurface/',views.surfacearea,name="areaofsurface"),
     path('',views.surfacearea,name="areaofsurfaceroot")
 ]
-
+```
 
 ## SERVER SIDE PROCESSING:
 
